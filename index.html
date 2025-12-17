@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5th Grade English Quiz</title>
+    
+    <!-- Google Analytics (Replace G-XXXXXXXXXX with your Measurement ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Replace G-XXXXXXXXXX with your actual Google Analytics Measurement ID
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'Noto Sans Arabic', 'sans-serif'],
+            },
+            colors: {
+              primary: '#3B82F6',
+              secondary: '#F59E0B',
+              accent: '#10B981',
+              background: '#F3F4F6',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F3F4F6;
+        font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+      }
+      .font-arabic { font-family: 'Noto Sans Arabic', sans-serif; }
+      .rtl {
+        direction: rtl;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <!-- 
+      Netlify Form Detection 
+      This hidden form tells Netlify to accept submissions for "quiz-submission" 
+    -->
+    <form name="quiz-submission" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="studentName" />
+      <input type="text" name="score" />
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
